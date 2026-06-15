@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mouhamadou Bamba FALL — Développeur Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░ CURSOR ░░ -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- ░░ CANVAS PARTICLES ░░ -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ░░ NAV ░░ -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>MBF<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#projects">Projets</a></li>
+      <li><a href="#skills">Compétences</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-burger" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ░░ MOBILE MENU ░░ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">À propos</a></li>
+      <li><a href="#projects" class="mobile-link">Projets</a></li>
+      <li><a href="#skills" class="mobile-link">Compétences</a></li>
+      <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       HERO
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tag reveal-up">
+        <span class="tag-dot"></span> Disponible pour de nouvelles opportunités
+      </div>
+      <h1 class="hero-title reveal-up">
+        Je transforme<br>
+        des idées en<br>
+        <span class="gradient-text" id="typewriter"></span><span class="cursor-blink">|</span>
+      </h1>
+      <p class="hero-desc reveal-up">
+        Développeur Web Full Stack basé à <strong>Dakar, Sénégal</strong>.<br>
+        Je construis des interfaces soignées et des architectures solides —<br>
+        du prototype au SaaS en production.
+      </p>
+      <div class="hero-actions reveal-up">
+        <a href="#projects" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-ghost">Me contacter</a>
+      </div>
+      <div class="hero-socials reveal-up">
+        <a href="https://github.com/Fallbamba10" target="_blank" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/mouhamadou-bamba-fall" target="_blank" class="social-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-wrapper">
+        <div class="hero-card">
+          <div class="card-header">
+            <span class="card-dot red"></span>
+            <span class="card-dot yellow"></span>
+            <span class="card-dot green"></span>
+            <span class="card-filename">gymflow.ts</span>
+          </div>
+          <pre class="card-code"><span class="c-kw">const</span> <span class="c-var">dev</span> = {
+  name: <span class="c-str">"Bamba FALL"</span>,
+  stack: [<span class="c-str">"Next.js"</span>, <span class="c-str">"TypeScript"</span>,
+          <span class="c-str">"Supabase"</span>, <span class="c-str">"PHP"</span>],
+  building: <span class="c-str">"GymFlow SaaS"</span>,
+  location: <span class="c-str">"Dakar 🇸🇳"</span>,
+  open: <span class="c-bool">true</span>,
+};</pre>
+        </div>
+        <div class="hero-card-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       ABOUT
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label reveal-up"><span>01</span> À propos</div>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <h2>Coder, c'est résoudre<br>des <span class="gradient-text">problèmes réels</span>.</h2>
+          <p>Jeune diplômé en Génie Informatique de la <strong>HEMI Dakar</strong>, certifié Full Stack chez <strong>SunuCode</strong>, je construis des produits web du frontend à la base de données.</p>
+          <p>Ma conviction : la technologie doit être accessible et utile. C'est pour ça que je développe <strong>GymFlow</strong>, un SaaS pensé pour les salles de sport en Afrique de l'Ouest qui gèrent encore tout sur papier.</p>
+          <p>Quand je ne code pas, j'apprends — data engineering, IA, nouveaux frameworks. Le secteur avance vite, j'avance avec lui.</p>
+        </div>
+        <div class="about-timeline reveal-up">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="tl-date">2025 – 2026</span>
+              <h4>Certificat Full Stack</h4>
+              <p>SunuCode, Dakar</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="tl-date">2023 – 2026</span>
+              <h4>Licence Génie Informatique</h4>
+              <p>HEMI, Dakar</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot active"></div>
+            <div class="timeline-content">
+              <span class="tl-date">2026 — présent</span>
+              <h4>GymFlow SaaS</h4>
+              <p>En développement actif</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       PROJECTS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label reveal-up"><span>02</span> Projets</div>
+      <h2 class="section-title reveal-up">Ce que j'ai construit</h2>
+
+      <!-- FEATURED PROJECT -->
+      <div class="project-featured reveal-up">
+        <div class="pf-visual">
+          <div class="pf-mockup gymflow-mockup">
+            <div class="mockup-bar">
+              <span class="m-dot"></span><span class="m-dot"></span><span class="m-dot"></span>
+              <span class="m-url">gymflow-ten-tan.vercel.app</span>
+            </div>
+            <div class="mockup-screen gymflow-screen">
+              <div class="gf-sidebar">
+                <div class="gf-logo">GymFlow</div>
+                <div class="gf-nav-item active">Dashboard</div>
+                <div class="gf-nav-item">Membres</div>
+                <div class="gf-nav-item">Abonnements</div>
+                <div class="gf-nav-item">Caisse</div>
+                <div class="gf-nav-item">Rapports</div>
+              </div>
+              <div class="gf-main">
+                <div class="gf-stats">
+                  <div class="gf-stat"><span class="stat-n">142</span><span class="stat-l">Membres</span></div>
+                  <div class="gf-stat"><span class="stat-n">38</span><span class="stat-l">Actifs / jour</span></div>
+                  <div class="gf-stat accent"><span class="stat-n">94%</span><span class="stat-l">Taux rétention</span></div>
+                </div>
+                <div class="gf-chart">
+                  <div class="chart-bar" style="height:60%"></div>
+                  <div class="chart-bar" style="height:80%"></div>
+                  <div class="chart-bar" style="height:55%"></div>
+                  <div class="chart-bar" style="height:90%"></div>
+                  <div class="chart-bar active" style="height:75%"></div>
+                  <div class="chart-bar" style="height:85%"></div>
+                  <div class="chart-bar" style="height:70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pf-info">
+          <div class="pf-badge">⭐ Projet vedette · SaaS</div>
+          <h3>GymFlow</h3>
+          <p>Plateforme SaaS de gestion de salles de sport pensée pour l'Afrique de l'Ouest. Remplace les cahiers papier par un tableau de bord complet : membres, abonnements, pointage QR, caisse, rôles employés et exports CSV.</p>
+          <div class="pf-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
+            <span>Tailwind CSS</span><span>Stripe</span><span>Vercel</span>
+          </div>
+          <div class="pf-links">
+            <a href="https://gymflow-ten-tan.vercel.app" target="_blank" class="btn-primary btn-sm">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Voir le projet
+            </a>
+            <a href="https://github.com/Fallbamba10/gymflow" target="_blank" class="btn-ghost btn-sm">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code source
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS GRID -->
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up">
+          <div class="pc-visual samadoctor-visual">
+            <div class="sd-header">
+              <div class="sd-logo">&#10010; SamaDoctor</div>
+            </div>
+            <div class="sd-body">
+              <div class="sd-patient">
+                <div class="sd-avatar"></div>
+                <div class="sd-info">
+                  <div class="sd-name"></div>
+                  <div class="sd-sub"></div>
+                </div>
+                <div class="sd-badge">RDV 14h</div>
+              </div>
+              <div class="sd-patient">
+                <div class="sd-avatar"></div>
+                <div class="sd-info">
+                  <div class="sd-name"></div>
+                  <div class="sd-sub"></div>
+                </div>
+                <div class="sd-badge ok">Traité</div>
+              </div>
+              <div class="sd-patient">
+                <div class="sd-avatar"></div>
+                <div class="sd-info">
+                  <div class="sd-name"></div>
+                  <div class="sd-sub"></div>
+                </div>
+                <div class="sd-badge urgent">Urgent</div>
+              </div>
+            </div>
+          </div>
+          <div class="pc-info">
+            <h3>SamaDoctor</h3>
+            <p>Application web médicale : gestion des patients, dossiers, médicaments et prise de rendez-vous. Architecture full stack complète.</p>
+            <div class="pc-tags">
+              <span>HTML/CSS</span><span>PHP</span><span>MySQL</span><span>JavaScript</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/Fallbamba10/samadoctor" target="_blank" class="btn-ghost btn-sm">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up">
+          <div class="pc-visual teranga-visual">
+            <div class="th-header">
+              <div class="th-logo">TerangaHomes</div>
+              <div class="th-search">🔍 Rechercher un bien...</div>
+            </div>
+            <div class="th-grid">
+              <div class="th-card">
+                <div class="th-img th-img-1"></div>
+                <div class="th-card-info">
+                  <div class="th-price">45 000 000 FCFA</div>
+                  <div class="th-loc">📍 Almadies, Dakar</div>
+                </div>
+              </div>
+              <div class="th-card">
+                <div class="th-img th-img-2"></div>
+                <div class="th-card-info">
+                  <div class="th-price">18 000 000 FCFA</div>
+                  <div class="th-loc">📍 Plateau, Dakar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pc-info">
+            <h3>TerangaHomes</h3>
+            <p>Plateforme immobilière avec intégration Google Maps, recherche avancée, gestion des biens et espace admin. Design responsive moderne.</p>
+            <div class="pc-tags">
+              <span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Google Maps API</span>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/Fallbamba10/terangahomes" target="_blank" class="btn-ghost btn-sm">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.13 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SKILLS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="skills">
+    <div class="section-inner">
+      <div class="section-label reveal-up"><span>03</span> Compétences</div>
+      <h2 class="section-title reveal-up">Ma boîte à outils</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">🎨</div>
+          <h4>Frontend</h4>
+          <div class="sk-pills">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>TypeScript</span><span>React</span><span>Next.js</span>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">⚙️</div>
+          <h4>Backend</h4>
+          <div class="sk-pills">
+            <span>PHP</span><span>Node.js</span><span>Python</span>
+            <span>Supabase</span><span>REST API</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">🗄️</div>
+          <h4>Bases de données</h4>
+          <div class="sk-pills">
+            <span>MySQL</span><span>PostgreSQL</span><span>Supabase</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">🛠️</div>
+          <h4>Outils & DevOps</h4>
+          <div class="sk-pills">
+            <span>Git</span><span>GitHub</span><span>VS Code</span>
+            <span>Vercel</span><span>MS Project</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">📊</div>
+          <h4>Data & IA</h4>
+          <div class="sk-pills">
+            <span>Python</span><span>Data Engineering</span>
+            <span>Low/No Code</span><span>IBM Watson</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up">
+          <div class="sk-icon">🌍</div>
+          <h4>Langues</h4>
+          <div class="sk-pills">
+            <span>Français — Natif</span>
+            <span>Anglais — Intermédiaire</span>
+            <span>Wolof — Natif</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       CERTIFICATIONS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="certifications">
+    <div class="section-inner">
+      <div class="section-label reveal-up"><span>04</span> Certifications</div>
+      <h2 class="section-title reveal-up">Formations continues</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer">IBM / Coursera</div>
+          <h4>Python for Data Science, AI &amp; Development</h4>
+          <div class="cert-footer">
+            <span class="cert-date">Janvier 2025</span>
+            <span class="cert-badge">Validé</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer">IBM / Coursera</div>
+          <h4>Introduction to Software Engineering</h4>
+          <div class="cert-footer">
+            <span class="cert-date">Janvier 2025</span>
+            <span class="cert-badge">Validé</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer">IBM / Coursera</div>
+          <h4>Introduction to Data Engineering</h4>
+          <div class="cert-footer">
+            <span class="cert-date">Janvier 2025</span>
+            <span class="cert-badge">Validé</span>
+          </div>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-issuer">Coursera</div>
+          <h4>Low Code – No Code Development</h4>
+          <div class="cert-footer">
+            <span class="cert-date">Décembre 2023</span>
+            <span class="cert-badge">Validé</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       CONTACT
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-label reveal-up"><span>05</span> Contact</div>
+      <h2 class="section-title reveal-up">Travaillons ensemble</h2>
+      <p class="contact-intro reveal-up">Un projet en tête ? Une collaboration ? N'hésite pas à m'écrire.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <div class="ci-item">
+            <div class="ci-icon">📧</div>
+            <div>
+              <div class="ci-label">Email</div>
+              <a href="mailto:bambafall65@gmail.com">bambafall65@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📱</div>
+            <div>
+              <div class="ci-label">Téléphone</div>
+              <a href="tel:+221786000028">+221 78 600 00 28</a>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <div class="ci-label">Localisation</div>
+              <span>Dakar, Sénégal</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/Fallbamba10" target="_blank" class="cs-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/mouhamadou-bamba-fall" target="_blank" class="cs-link">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal-up" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Objet du message" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="submitBtn">
+            <span id="btnText">Envoyer le message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Message envoyé ! Je te répondrai très vite.
+          </div>
+          <div class="form-error" id="formError">
+            ❌ Une erreur s'est produite. Réessaie ou écris-moi directement par email.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">&lt;</span>MBF<span class="logo-bracket">/&gt;</span></span>
+      <span>Conçu &amp; développé par Mouhamadou Bamba FALL — Dakar 🇸🇳</span>
+      <span class="footer-year" id="footerYear"></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
